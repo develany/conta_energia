@@ -16,7 +16,7 @@ const Iniciar = () => {
             const dados = { cliente_id, unidade_id };
 
             const response = await API.get(`/clientes/${dados.cliente_id}/unidades/${dados.unidade_id}/consumos`)
-            setContas(response)
+            setContas(response.data)
         } catch (error) {
             alert(error.response.data.error)
         }
@@ -46,7 +46,16 @@ const Iniciar = () => {
             </div>
             <button type="submit" className="btn btn-light btn-lg">Boletos</button>
         </form>
-        <h1>{contas}</h1>
+        {contas && (
+            <div>
+                <h1>Contas:</h1>
+                <ul>
+                    {contas.map((conta, index) => (
+                        <li key={index}>{conta.clinte}</li>
+                    ))}
+                </ul>
+            </div>
+        )}
     </>
     )
 }
