@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { API } from "../Api";
-
+import Conta from "../components/Conta";
 
 
 const Iniciar = () => {
@@ -46,26 +46,7 @@ const Iniciar = () => {
             </div>
             <button type="submit" className="btn btn-light btn-lg">Boletos</button>
         </form>
-        {contas && (
-            <div>
-                <h1>Contas:</h1>
-                <ul>
-                    {contas.map((conta, index) => (
-                        <li key={index}>
-                            <p>Reference: {conta.reference}</p>
-                            <p>Vencimento: {conta.vecimento}</p>
-                            <p>Valor: {conta.valor}</p>
-                            <p>KWH: {conta.kwh}</p>
-                            <p>Cliente ID: {conta.cliente_id}</p>
-                            <p>Nome: {conta.cliente.nome}</p>
-                            <p>Unidade ID: {conta.unidade.id}</p>
-                            <p>Endereço: {conta.unidade.endereco}</p>
-                            <p>Tipo de Fornecimento: {conta.unidade.tipo_fornecimento}</p>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        )}
+        {contas && (<Conta contas={contas} />)}
     </>
     )
 }

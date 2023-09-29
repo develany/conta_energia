@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 const Routes = () => {
     return (
         <Rotas>
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
 
 
         </Rotas>
