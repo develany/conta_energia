@@ -46,12 +46,22 @@ const Iniciar = () => {
             </div>
             <button type="submit" className="btn btn-light btn-lg">Boletos</button>
         </form>
-        {contas && (
+        {contas.length > 0 && (
             <div>
                 <h1>Contas:</h1>
                 <ul>
                     {contas.map((conta, index) => (
-                        <li key={index}>{conta.clinte}</li>
+                        <li key={index}>
+                            <p>Reference: {conta.reference}</p>
+                            <p>Vencimento: {conta.vecimento}</p>
+                            <p>Valor: {conta.valor}</p>
+                            <p>KWH: {conta.kwh}</p>
+                            <p>Cliente ID: {conta.cliente_id}</p>
+                            <p>Nome: {conta.cliente.nome}</p>
+                            <p>Unidade ID: {conta.unidade.id}</p>
+                            <p>Endereço: {conta.unidade.endereco}</p>
+                            <p>Tipo de Fornecimento: {conta.unidade.tipo_fornecimento}</p>
+                        </li>
                     ))}
                 </ul>
             </div>
