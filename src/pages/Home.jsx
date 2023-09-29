@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { API } from "../Api";
 import Conta from "../components/Conta";
-import '../components/styles.css';
 
 
 

@@ -37,11 +37,3 @@
     transform: rotate(360deg);
   }
 }
-
-.card-custom {
-  text-align: center;
-  background-color: #3498db;
-  color: #fff;
-  max-width: 18rem;
-  margin: 10px auto;
-}

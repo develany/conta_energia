@@ -1,5 +1,4 @@
 import React from "react";
-import './styles.css';
 
 function Boletos({ contas }) {
 
@@ -9,8 +8,8 @@ function Boletos({ contas }) {
                 <div className="row">
                     {contas.map((conta, index) => (
                         <div key={index} className="col">
-                            <div className="card card-custom">
-                                <div className="card-body">
+                            <div className="card ">
+                                <div className="card-body bg-info text-success">
                                     <h5 className="card-title">Nº da Cliente: {conta.cliente_id}</h5>
                                     <p className="card-text">{conta.cliente.nome}</p>
                                 </div>
