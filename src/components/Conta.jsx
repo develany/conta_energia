@@ -9,7 +9,7 @@ function Boletos({ contas }) {
                     {contas.map((conta, index) => (
                         <div key={index} className="col">
                             <div className="card ">
-                                <div className="card-body bg-info text-success">
+                                <div className="card-body bg-info text-white">
                                     <h5 className="card-title">Nº da Cliente: {conta.cliente_id}</h5>
                                     <p className="card-text">{conta.cliente.nome}</p>
                                 </div>
