@@ -22,8 +22,9 @@ const Iniciar = () => {
         }
     }
     return (<>
-        <form onSubmit={buscar} method="POST" className="max-width-40 mx-auto p-3 bg-info   col-6">
 
+        <form onSubmit={buscar} method="POST" className="max-width-40 mx-auto p-3 bg-info mt-5  col-6">
+            <h1 className='mb-5' >Voltz</h1>
             <div className="d-flex justify-content-center ">
                 <div className="input-group mb-3">
                     <span className="input-group-text">Numero do Cliente</span>

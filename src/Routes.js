@@ -5,8 +5,6 @@ const Routes = () => {
     return (
         <Rotas>
             <Route path="/" element={<Home />} />
-
-
         </Rotas>
     )
 }
