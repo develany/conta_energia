@@ -46,7 +46,7 @@ const Iniciar = () => {
             </div>
             <button type="submit" className="btn btn-light btn-lg">Boletos</button>
         </form>
-        {contas.length > 0 && (
+        {contas && (
             <div>
                 <h1>Contas:</h1>
                 <ul>
